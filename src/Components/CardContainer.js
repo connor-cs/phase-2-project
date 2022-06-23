@@ -14,7 +14,7 @@ export default function CardContainer({coinData}) {
       marketCap={coin.marketCap}
     />)
   })
-  console.log(coinsList)
+  // console.log(coinsList)
   
   return (
     <div>
