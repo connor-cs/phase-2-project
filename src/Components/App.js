@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import CardContainer from './CardContainer';
 import Home from './Home';
 import Nav from './Nav'
+import Styles from '/home/cyphers/development/code/project/phase-2-project/src/Styles.css'
 
 function App() {
   

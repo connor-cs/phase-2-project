@@ -6,7 +6,10 @@ export default function Nav({handleForm}) {
   
   
   return (
-    <div>Nav
+    <div class="nav">
+      Home
+      Top 10
+      Favorites
       <Form handleForm={handleForm}/>
     </div>
   )

@@ -11,6 +11,7 @@ export default function CardContainer({coinData}) {
       name={coin.name}
       rank={coin.rank}
       price={coin.price}
+      change={coin.priceChange1d}
       marketCap={coin.marketCap}
     />)
   })
