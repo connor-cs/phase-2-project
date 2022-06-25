@@ -1,6 +1,6 @@
 .coincard {
   width: 400px;
-  height: 300px;
+  height: 400px;
   background-color: rgb(36, 36, 36);
   color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -10,6 +10,8 @@
   align-items: center;
   padding: 20px;
   padding-bottom:20px;
+  transition: 0.75s;
+  
 }
 
 .image {
@@ -24,4 +26,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+}
+
+.formdiv {
+  
+  background-color: rgb(255, 196, 0);
 }

@@ -2,12 +2,15 @@ import { useState, useEffect } from 'react';
 import CardContainer from './CardContainer';
 import Home from './Home';
 import Nav from './Nav'
-import Styles from '/home/cyphers/development/code/project/phase-2-project/src/Styles.css'
+import Favorites from './Favorites';
+import { Routes, Route } from 'react-router-dom'
+
 
 function App() {
   
   const [coins, setCoins] = useState([])
   const [formInput, setFormInput] = useState('')
+  const [favs, setFavs] = useState([])
   
   useEffect(() => {
     fetch('https://api.coinstats.app/public/v1/coins?skip=0&limit=20&currency=USD')
@@ -15,11 +18,7 @@ function App() {
       .then(data=>setCoins(data.coins))
       
   }, [])
-  console.log(coins)
-  
-  function handleForm(input) {
-    setFormInput(input)
-  }
+  // console.log(coins)
 
   useEffect(()=> {
     const filteredCoins = coins.filter(coin => {
@@ -29,10 +28,26 @@ function App() {
     setCoins(filteredCoins)
   }, [formInput])
   
+  
+  
+  function handleForm(input) {setFormInput(input)}
+  function handleFav(input) {setFavs(input)}
+
+  
+
+
   return (
     <div className="App">
-      <Nav handleForm={handleForm}/>
-      <CardContainer coinData={coins}/>
+      <Nav handleForm={handleForm} formIn={formInput}/>
+      
+      <Routes>
+        
+        <Route exact path='/favorites' element={<Favorites favorites={favs}/>}></Route>
+        
+        <Route exact path='/home' element={<CardContainer coinData={coins} handleFav={handleFav}/>}></Route>
+      
+      </Routes>
+    
     </div>
   );
 }
