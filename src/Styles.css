@@ -39,3 +39,7 @@
   
   background-color: rgb(255, 196, 0);
 }
+
+.box {
+  max-width: 50%;
+}

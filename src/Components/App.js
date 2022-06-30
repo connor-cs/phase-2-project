@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 
 
 function App() {
-  
+  document.title='Crypto App'
   const [coins, setCoins] = useState([])
   const [formInput, setFormInput] = useState('')
   const [favs, setFavs] = useState([])

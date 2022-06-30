@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react'
 import CardContainer from './CardContainer'
 
 
-export default function Home() {
+export default function Home({coinData, handleFav}) {
   
 
   
   return (
     <div>
-      {/* <CardContainer coinData={coins}/> */}
+      {/* <CardContainer coinData={coins} handleFav={handleFav}/> */}
     </div>
   )
 }

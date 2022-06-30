@@ -13,7 +13,7 @@ export default function Form({handleForm, formIn}) {
   //otherwise call formInput function and update state as normal
   const del = (e) => {
     if (e.keyCode=== 8){
-      handleForm(formIn.pop())
+      handleForm(formIn.slice(0,-1))
   } else formInput(e)}
   
   const form = useForm({
@@ -21,14 +21,14 @@ export default function Form({handleForm, formIn}) {
   });
     
     return (
-      <Box sx={{ MaxWidth: 300,
+      <Box className='box'sx={{ MaxWidth: 300,
       padding: 10,
       cursor: 'pointer', 
       display: 'grid'}} mx="auto">
         <form onChange={formInput} onKeyDown={del}>
           <TextInput/>
   
-          <Group position="right" mt="md">
+          <Group align='AlignItems'direction='row'position="right" mt="md">
             <Button type="submit">Submit</Button>
           </Group>
         </form>
