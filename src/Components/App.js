@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+
 import CardContainer from './CardContainer';
-import Nav from './Nav'
+import Nav from './Nav';
+import Blockchains from './Blockchains';
 import Favorites from './Favorites';
 import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+
 
 
 function App() {
@@ -62,9 +65,11 @@ function App() {
 
       <Routes>
 
-        <Route exact path='/favorites' element={<Favorites favorites={favs} handleClick={handleDelete} />}></Route>
+        <Route exact path='/Watchlist' element={<Favorites favorites={favs} handleClick={handleDelete} />}></Route>
 
         <Route exact path='/home' element={<CardContainer coinData={coins} handleClick={handleFav} />}></Route>
+
+        <Route exact path='/Blockchains' element={<Blockchains />}></Route>
 
       </Routes>
 

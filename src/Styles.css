@@ -14,6 +14,11 @@
   
 }
 
+.blockchains {
+  display: grid;
+  place-items: center;
+}
+
 .image {
   
   height: 100px
@@ -31,7 +36,7 @@
   list-style-type: none;
 }
 
-.link {
+/* .link {
   justify-content: left;
   align-items: left;
   position: fixed;
@@ -40,11 +45,26 @@
   float: left;
   left: 30px;
   list-style-type: none;
-}
+} */
 
 .list {
   list-style-type: none;
   list-style: none;
+}
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  position: fixed;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  position: fixed;
+  display: inline-block;
+  text-align: left;
+  left: 1px;
 }
 
 .container {
@@ -53,7 +73,6 @@
 }
 
 .formdiv {
-  
   background-color: rgb(255, 196, 0);
 }
 

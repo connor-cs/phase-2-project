@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function Card({id, icon, name, rank, price, marketCap, change, handleClick, ticker, coin}) {
-  console.log(coin)
+  // console.log(coin)
   function buttonClick() {
-    console.log(id)
-    console.log(coin)
+    // console.log(id)
+    // console.log(coin)
     handleClick(coin)
   }
   

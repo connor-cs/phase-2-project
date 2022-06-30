@@ -35,7 +35,6 @@ export default function Favs({favorites, handleClick}) {
           handleClick={handleClick}
         />) 
       })}
-      dlksldkjf
     </div>
     </>
   )

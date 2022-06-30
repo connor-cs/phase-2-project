@@ -29,7 +29,7 @@ export default function Form({handleForm, formIn}) {
           <TextInput/>
   
           <Group align='AlignItems'direction='row'position="right" mt="md">
-            <Button type="submit">Submit</Button>
+            {/* <Button type="submit">Submit</Button> */}
           </Group>
         </form>
       </Box>
