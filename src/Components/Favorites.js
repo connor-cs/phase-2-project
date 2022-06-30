@@ -14,6 +14,8 @@ export default function Favs({favorites, handleClick}) {
       .then(data => setWatchist([...watchlist, ...data]))
   },[])
   console.log('watchlist:', watchlist)
+  
+
   return (
     <>
     <div>
@@ -21,7 +23,8 @@ export default function Favs({favorites, handleClick}) {
         console.log('fav', fav)
         return (<Card 
           key={fav.id}
-          id={fav.id} 
+          id={fav.id}
+          coin={fav} 
           icon={fav.icon} 
           name={fav.name}
           rank={fav.rank}

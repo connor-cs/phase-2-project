@@ -9,6 +9,8 @@ export default function Top10() {
   },[])
   
   return (
-    <div>Top10</div>
+    <div>
+      <h1 className='header'>Top Smart Contract Blockchains</h1>
+    </div>
   )
 }
