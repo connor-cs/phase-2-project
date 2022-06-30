@@ -28,6 +28,23 @@
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: left;
+  list-style-type: none;
+}
+
+.link {
+  justify-content: left;
+  align-items: left;
+  position: fixed;
+  display: flex;
+  text-align: left;
+  float: left;
+  left: 30px;
+  list-style-type: none;
+}
+
+.list {
+  list-style-type: none;
+  list-style: none
 }
 
 .container {
@@ -42,4 +59,9 @@
 
 .box {
   max-width: 50%;
+}
+
+nav a:active {
+  color:tomato;
+  border-bottom: 2px solid tomato;
 }

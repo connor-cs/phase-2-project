@@ -10,10 +10,11 @@ export default function Nav({ handleForm, formInput }) {
   return (
     <>
     <nav className="nav">
-      <NavLink to='/home'>Home</NavLink>
-      <NavLink to='./Top10'>Smart Contract Blockchains</NavLink>
-      <NavLink to='/Favorites'>Favorites</NavLink>
-      
+      <ul>
+      <li><div className='link'><NavLink to='/home'>Home</NavLink></div></li>
+      <li><div className='link'><NavLink to='./Top10'>Smart Contract Blockchains</NavLink></div></li>
+      <li><div className='link'><NavLink to='/Favorites'>Favorites</NavLink></div></li>
+      </ul>
     </nav>
     <div className='formdiv'>
     <Form handleForm={handleForm} formIn={formInput}/>

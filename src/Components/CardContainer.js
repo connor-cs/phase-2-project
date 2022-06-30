@@ -1,11 +1,12 @@
 import React from 'react'
 import Card from './Card'
 
-export default function CardContainer({coinData, handleFav}) {
+export default function CardContainer({coinData, handleClick}) {
   // console.log(coinData)
   
   const coinsList = coinData.map(coin => {
-    return (<Card 
+    return (<Card
+      coin={coin} 
       key={coin.id}
       id={coin.id} 
       icon={coin.icon} 
@@ -15,7 +16,7 @@ export default function CardContainer({coinData, handleFav}) {
       change={coin.priceChange1d}
       marketCap={coin.marketCap}
       ticker={coin.symbol}
-      handleFav={handleFav}
+      handleClick={handleClick}
     />)
   })
   // console.log(coinsList)

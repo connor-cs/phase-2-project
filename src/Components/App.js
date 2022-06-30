@@ -24,16 +24,33 @@ function App() {
     const filteredCoins = coins.filter(coin => {
       return coin.name.toLowerCase().includes(formInput.toLowerCase())
     })
-    console.log(filteredCoins)
     setCoins(filteredCoins)
   }, [formInput])
   
   
   
   function handleForm(input) {setFormInput(input)}
-  function handleFav(input) {setFavs(input)}
-
   
+  function handleFav(input) 
+  {setFavs([...favs, input]) 
+    console.log('favs:', favs)
+    fetch('http://localhost:3001/watchlist', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'},
+      body: JSON.stringify(input)
+  })
+  }
+
+  function handleDelete(coin) {
+    console.log('delete function')
+    console.log(coin)
+    //make delete request and update favs
+    fetch(`http://localhost:3001/watchlist/${coin.favId}`, {
+      method: 'DELETE'})
+      .then(r=>r.json())
+      .then(data => console.log(data))
+  }
 
 
   return (
@@ -42,9 +59,9 @@ function App() {
       
       <Routes>
         
-        <Route exact path='/favorites' element={<Favorites favorites={favs}/>}></Route>
+        <Route exact path='/favorites' element={<Favorites favorites={favs} handleClick={handleDelete}/>}></Route>
         
-        <Route exact path='/home' element={<CardContainer coinData={coins} handleFav={handleFav}/>}></Route>
+        <Route exact path='/home' element={<CardContainer coinData={coins} handleClick={handleFav}/>}></Route>
       
       </Routes>
     
