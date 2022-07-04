@@ -17,7 +17,7 @@ export default function Card({id, icon, name, rank, price, marketCap, change, ha
       <p>Price: ${price}</p>
       <p>Percent change 1 day: {change} %</p>
       <p>Market cap: {marketCap}</p>
-      <button style={{cursor: 'pointer'}} onClick={buttonClick}>Add to watchlist</button>
+      <button style={{cursor: 'pointer'}} onClick={buttonClick}>Watchlist</button>
     </div>
   )
 }
